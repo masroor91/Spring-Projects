@@ -1,0 +1,23 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+		"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+		
+<beans>
+	<bean id="dao" class="beans.DAO" dependency-check="simple">
+		<property name="driverclass" value="com.ibm.db2.jcc.DB2Driver"/>
+		<property name="url" value="jdbc:db2://PC181461.cts.com:50000/Mas"/>
+		<property name="user" value="db2admin5"/>
+		<property name="pass" value="Admin@123"/>
+	
+	</bean>
+	
+	<bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"/>
+	
+	<bean id="dao2" class="beans.DAO">
+		<property name="driverclass" value="com.mysql.jdbc.Driver"/>
+		<property name="url" value="jdbc:mysql://localhost:3306/Mas"/>
+		<property name="user" value="root"/>
+		<property name="pass" value="root"/>
+	
+	</bean>
+
+</beans>

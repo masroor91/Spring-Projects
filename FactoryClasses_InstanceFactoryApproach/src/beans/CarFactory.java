@@ -1,14 +1,14 @@
 package beans;
 
 public class CarFactory {
-	public static String carName;
+	public String carName;
 
-	public static void setCarName(String carName) {
-		CarFactory.carName = carName;
+	public void setCarName(String carName) {
+		this.carName = carName;
 	}
 	
-	//static factory approach
-	public static Car getInstance() throws Exception{
+	//non-static factory approach
+	public Car getInstance() throws Exception{
 		Car c= (Car)Class.forName(carName).newInstance();
 		return c;
 		

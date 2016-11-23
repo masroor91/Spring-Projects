@@ -4,14 +4,15 @@
 <beans>
 
 	<bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
-		<property name="staticMethod" value="beans.Carfactory.setCarName "/>
+		<property name="staticMethod" value="beans.CarFactory.setCarName"/>
 		<property name="arguments">
 			<list>
-				<value>beans.Audi</value>
+				<value>beans.Honda</value>
 			</list>
 		</property>
 	
-	
 	</bean>
+	
+	<bean id="cf" class="beans.CarFactory" factory-method="getInstance"/>
 
 </beans>

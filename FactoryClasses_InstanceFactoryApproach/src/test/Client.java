@@ -11,7 +11,7 @@ public class Client {
 	
 		 ApplicationContext ap = new ClassPathXmlApplicationContext("resources/spring.xml");
 		
-		 Car c= (Car) ap.getBean("cf");
+		 Car c= (Car) ap.getBean("c");
 		 
 		 c.drive();
 	}

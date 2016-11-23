@@ -1,0 +1,15 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+		"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+	
+	<bean id="cf" class="beans.CarFactory">
+		<property name="carName" value="beans.Maruti"></property>
+	</bean>
+	
+<!-- 	its looking like a simple bean class by seeing its config but its not a bean class -->
+<!-- 	as it implements FactoryBean which makes this Factory class to be configured as -->
+<!-- 	normal bean class.  -->
+
+</beans>

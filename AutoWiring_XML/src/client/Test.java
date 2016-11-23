@@ -13,7 +13,7 @@ public class Test {
 		//String files= "resources/spring-ByType.xml";
 		String files[] = new String[2];
 		files[0]= "resources/spring-ByName.xml";
-		//files[1]="resources/spring-Constructor.xml";
+		//files[1]="resources/spring-constructor.xml";
 		files[1]="resources/spring-autodetect.xml";
 		
 		

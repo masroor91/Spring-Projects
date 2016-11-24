@@ -1,0 +1,23 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+		"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+		
+<beans>
+
+	<!-- 	to activate the autowire annotations -->
+	<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
+	
+	<bean id ="eng1" class="beans.Engine">
+		<property name="modelYear" value="2013"/>
+	</bean>
+	
+	<bean id="eng2" class="beans.Engine">
+		<property name="modelYear" value="2015"/>
+	</bean>
+	
+	<bean id="car" class="beans.Car">
+		<property name="carname" value="SUZUKI" />
+	</bean>
+	<bean id="bus" class="beans.Bus">
+		<property name="busname" value="TATA" />
+	</bean>
+</beans>

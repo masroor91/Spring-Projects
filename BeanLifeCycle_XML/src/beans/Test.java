@@ -3,6 +3,7 @@ package beans;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class Test {
@@ -47,6 +48,23 @@ public class Test {
 		insertstmt.executeUpdate();
 		
 		System.out.println("Insert statement executed");
+	}
+	
+	public void displayAll() throws SQLException {
+		PreparedStatement getAllstmt=con.prepareStatement("Select * from employee");
+		ResultSet rs= getAllstmt.executeQuery();
+		
+		StringBuilder builder = new StringBuilder("Total Employees \n");
+		while(rs.next()){
+			
+			builder.append("Emp id: ").append(rs.getInt(1)).
+			append(", Name: ").append(rs.getString(2)).
+			append(", Email: ").append(rs.getString(3)).
+			append(", Address: ").append(rs.getString(4)).append("\n");
+			
+		}
+		
+		System.out.println(builder.toString());
 	}
 	
 	public void delete(int id) throws SQLException {

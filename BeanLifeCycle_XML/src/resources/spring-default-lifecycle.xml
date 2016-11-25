@@ -2,14 +2,14 @@
 		"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
 		
 
-<beans>
-	<bean id="t" class="beans.Test" init-method="init" destroy-method="destroy">
+<beans default-init-method="init" default-destroy-method="destroy">
+	<bean id="t" class="beans.Test">
 		<property name="driver" value="com.mysql.jdbc.Driver"/>
 		<property name="url" value="jdbc:mysql://localhost/Mas"/>
 		<property name="userName" value="root"/>
 		<property name="password" value="root"/>
 	</bean>
 
-	<bean id="t1" class="beans.Test1" init-method="init" destroy-method="destroy"/>
-	<bean id="t2" class="beans.Test2" init-method="init" destroy-method="destroy"/>
+	<bean id="t1" class="beans.Test1"/>
+	<bean id="t2" class="beans.Test2"/>
 </beans>

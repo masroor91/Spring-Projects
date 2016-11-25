@@ -28,7 +28,7 @@ public class Client {
 		
 		while(true){
 			System.out.println("Enter the choice\n1. Insert a new Record"
-					+ "\n2. Delete a Record\n3. Exit");
+					+ "\n2. Delete a Record\n3. Display All Employee\n4. Exit");
 			int ch= sc.nextInt();
 			
 			switch (ch) {
@@ -48,6 +48,10 @@ public class Client {
 				System.out.println("Enter id");
 				int id1=sc.nextInt();
 				t.delete(id1);
+				break;
+				
+			case 3:
+				t.displayAll();
 				break;
 			default:
 				cap.close();

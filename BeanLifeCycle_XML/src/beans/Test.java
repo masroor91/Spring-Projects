@@ -7,6 +7,7 @@ import java.sql.SQLException;
 
 public class Test {
 	
+	
 	private String driver, url, userName, password;
 	private Connection con;
 	

@@ -6,15 +6,11 @@
 <!-- 	By default the spring framework will create this Handler class. No need to configure -->
 <!-- 	<bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/> -->
 	
-<!-- 	Using SimpleUrlHandlerMapping -->
-	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
-		<property name="mappings">
-			<props>
-				<prop key="/hello.ds">hc</prop>
-			</props>
-		</property>
+<!-- 	Using ControllerClassNameUrlHandlerMapping -->
+
+<bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/>
+
 	
-	</bean>
 
 <!-- 	controller class -->
 	<bean name="hc" class="controller.HelloController"></bean>

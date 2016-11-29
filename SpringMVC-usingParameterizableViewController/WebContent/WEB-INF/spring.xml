@@ -17,7 +17,10 @@
 	</bean>
 
 <!-- 	controller class -->
-	<bean name="hc" class="controller.HelloController"></bean>
+	<bean name="hc" class="controller.HelloController">
+		<property name="viewName" value="success"/>
+	
+	</bean>
 
 <!-- View Resolver -->
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">

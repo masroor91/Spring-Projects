@@ -6,22 +6,13 @@
 <!-- 	By default the spring framework will create this Handler class. No need to configure -->
 <!-- 	<bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/> -->
 	
-<!-- 	Using SimpleUrlHandlerMapping -->
-	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
-		<property name="mappings">
-			<props>
-				<prop key="/hello.ds">hc</prop>
-			</props>
-		</property>
-	
-	</bean>
 
-<!-- 	controller class -->
-	<bean name="hc" class="controller.HelloController"></bean>
+	<bean name="/hello.ds" class="org.springframework.web.servlet.mvc.UrlFilenameViewController"/>
+	<bean name="/hi.ds" class="org.springframework.web.servlet.mvc.UrlFilenameViewController"/>
 
 <!-- View Resolver -->
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="prefix" value="/"/>
+		<property name="prefix" value="/WEB-INF/jsp/"/>
 		<property name="suffix" value=".jsp"/>	
 	</bean>
 	

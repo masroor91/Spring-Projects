@@ -1,0 +1,90 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+			
+<beans>
+<!-- 	Default Handler -->
+<!-- 	By default the spring framework will create this Handler class. No need to configure -->
+<!-- 	<bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/> -->
+	
+<!-- 	SimpleUrlHandlerMapping Class -->
+	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="/empsave.ds">empcrud</prop>
+				<prop key="/checkemp.ds">empcrud</prop>
+				<prop key="/empupdate.ds">empcrud</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<bean id="empcrud" class="controller.EmpCRUDController">
+		<property name="dao" ref="dao"></property>
+		<property name="methodNameResolver" ref="mnr"></property>
+	</bean>
+	
+	<bean id="mnr" class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver">
+		<property name="prefix" value="cd"/>
+		<property name="suffix" value="Demo"/>
+	</bean>
+	
+	<bean id="dao" class="beans.EmpDao"/>
+
+<!-- View Resolver -->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/jsp/"/>
+		<property name="suffix" value=".jsp"/>	
+	</bean>
+	
+	<bean id="cf" class="beans.ConnectionFactory">
+	</bean>
+	
+	<bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+		<property name="staticMethod">
+			<value>beans.ConnectionFactory.setDriver</value>
+		</property>
+		
+		<property name="arguments">
+			<list>
+				<value>com.mysql.jdbc.Driver</value>
+			</list>
+		</property>
+	</bean>
+	
+	<bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">	
+		<property name="staticMethod">
+			<value>beans.ConnectionFactory.setUrl</value>
+		</property>
+		
+		<property name="arguments">
+			<list>
+				<value>jdbc:mysql://localhost/Mas</value>
+			</list>
+		</property>
+	</bean>
+	
+	<bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">	
+		<property name="staticMethod">
+			<value>beans.ConnectionFactory.setUser</value>
+		</property>
+		
+		<property name="arguments">
+			<list>
+				<value>root</value>
+			</list>
+		</property>
+	</bean>
+		
+	<bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+		<property name="staticMethod">
+			<value>beans.ConnectionFactory.setPwd</value>
+		</property>
+		
+		<property name="arguments">
+			<list>
+				<value>root</value>
+			</list>
+		</property>
+		
+	</bean>
+	
+</beans>

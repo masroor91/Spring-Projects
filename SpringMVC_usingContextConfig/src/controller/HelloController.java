@@ -11,6 +11,7 @@ import org.springframework.web.servlet.mvc.Controller;
 
 public class HelloController implements Controller {
 
+	@Override
 	public ModelAndView handleRequest(HttpServletRequest req, HttpServletResponse resp) throws Exception {
 		
 		String name= req.getParameter("name");

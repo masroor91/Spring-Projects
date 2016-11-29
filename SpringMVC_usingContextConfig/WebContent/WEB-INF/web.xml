@@ -10,9 +10,8 @@
   	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
   	
   	<init-param>
-  		<param-name>ServLetContextConfig</param-name>
+  		<param-name>ContextConfigLocation</param-name>
   		<param-value>/WEB-INF/spring.xml</param-value>
-  	
   	</init-param>
   	
   </servlet>

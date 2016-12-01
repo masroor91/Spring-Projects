@@ -31,7 +31,7 @@ public class StudentBoImpl implements StudentBo {
 
 	@Override
 	public Student getStudentById(int id) throws Exception {
-		return dao.findById(id);
+		return dao.findByPk(id);
 		
 	}
 

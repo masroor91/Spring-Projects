@@ -24,7 +24,7 @@
 		
 		<property name="annotatedClasses">
 			<list>
-				<value>beans.Student</value>
+				<value>com.mas.ems.model.Student</value>
 			</list>
 		</property>
 	</bean>
@@ -33,10 +33,10 @@
 		<property name="sessionFactory" ref="sf"></property>
 	</bean>
 
-	<bean id="dao" class="dao.StudentDAOImpl" autowire="byName">
+	<bean id="dao" class="com.mas.ems.dao.StudentDaoImpl" autowire="byName">
 	</bean>
 	
-	<bean id="bo" class="business.StudentBoImpl" >
+	<bean id="bo" class="com.mas.ems.business.StudentBoImpl" >
 		<property name="dao" ref="dao"></property>
 	</bean>
 </beans>

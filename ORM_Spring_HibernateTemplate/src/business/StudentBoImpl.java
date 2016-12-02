@@ -57,7 +57,7 @@ public class StudentBoImpl implements StudentBo {
 	
 	@Override
 	public String studentToString(Student s) {
-		StringBuilder builder = new StringBuilder("==========================Employee============================\n");
+		StringBuilder builder = new StringBuilder("============================Student==============================\n");
 		
 		builder.append("Student id: ").append(s.getId()).append(" Name: ").append(s.getName())
 		.append(" Email: ").append(s.getEmail()).append(" Address: ").append(s.getAddress()).append("\n");
@@ -70,7 +70,7 @@ public class StudentBoImpl implements StudentBo {
 	public String studentListToString(List<Student> list) {
 		
 		
-		StringBuilder builder = new StringBuilder("=========================Employee============================\n");
+		StringBuilder builder = new StringBuilder("===========================Employee==============================\n");
 		
 		for (Student s: list){
 			builder.append("Student id: ").append(s.getId()).append(" Name: ").append(s.getName())

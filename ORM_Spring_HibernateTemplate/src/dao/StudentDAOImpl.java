@@ -46,7 +46,7 @@ public class StudentDAOImpl implements StudentDAO {
 		
 		DetachedCriteria dc= DetachedCriteria.forClass(Student.class);
 //		dc.setProjection(projection);
-		dc.add(Restrictions.eq("Name", name));
+		dc.add(Restrictions.eq("name", name));
 		
 		List<Student> list = (List<Student>) ht.findByCriteria(dc);
 		return list;
@@ -59,7 +59,7 @@ public class StudentDAOImpl implements StudentDAO {
 		
 		DetachedCriteria dc= DetachedCriteria.forClass(Student.class);
 //		dc.setProjection(projection);
-		dc.add(Restrictions.eq("Email", email));
+		dc.add(Restrictions.eq("email", email));
 		
 		List<Student> list = (List<Student>) ht.findByCriteria(dc);
 		return list;
@@ -70,7 +70,7 @@ public class StudentDAOImpl implements StudentDAO {
 		
 		DetachedCriteria dc= DetachedCriteria.forClass(Student.class);
 //		dc.setProjection(projection);
-		dc.add(Restrictions.eq("Address", address));
+		dc.add(Restrictions.eq("address", address));
 		
 		List<Student> list = (List<Student>) ht.findByCriteria(dc);
 		return list;

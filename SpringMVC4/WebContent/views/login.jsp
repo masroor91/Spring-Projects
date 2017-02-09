@@ -3,7 +3,7 @@
 	<form action="login/login" method="post">
 		<pre>
 			<label>Name:</label>	<input type="text" name="name">
-			<label>Password</label><input type="password" name="password">
+			<label>Hobby</label><input type="text" name="hobby">
 				<input type="submit" value="Login">
 		</pre>
 	</form>

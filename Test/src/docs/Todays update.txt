@@ -1,0 +1,29 @@
+Today's Update on Struts
+
+1. MVC and MVC-II Architecture
+2. Struts Introduction
+3. Struts 1.x Features
+	 (a) Validation support
+	 (b) Form Backup Support Support
+	 (c) Internatinalisation support
+	 (d) Localization Support
+	 (e) Exception Handling
+	 (f) Modularization
+	 (g) Multi Button, Action, Form Support
+	 (h) Tile Tag Support 
+	 (i) Plug in Support
+	 (j) Pre handling Support
+4. Struts 2.x Feature (Including above features struts 2.x supports following features)
+	 (a) Post Handling Support
+	 (b) AJAX Support
+	 (c) OGNL(Object Graph Notation Language) Support
+	 (d) Value Stack Support
+5.Simple Application Architecture using Struts
+	(a)ActionServlet Configuration
+	(b)Mapping of Input form to Bean Classes and Vice versa
+	(c)Validations
+6. Coded a simple registeration page and checked validations
+
+Questions
+1. Could not understand multi button, action, from support.
+2. doubt on struts configaration file.
